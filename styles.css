@@ -65,8 +65,8 @@ h1 span {
 .logitech-g502-card {
   animation-delay: 0.55s;
 }
-.card-three {
-  animation-delay: 0.65s;
+.dankquote-card {
+  animation-delay: 0.6s;
 }
 
 .projects-details {
@@ -83,6 +83,9 @@ h1 span {
   text-align: center;
 }
 
+.projects .project-block .projects-details .more-info-hover {
+}
+
 .projects-details a {
   font-size: 16px;
   text-align: center;
@@ -91,9 +94,10 @@ h1 span {
   color: #fff;
   font-family: "Open Sans", sans-serif;
   padding: 10px 15px;
-  background-color: #14253d;
-  filter: drop-shadow(1px 2px 4px #14253d);
-  border-radius: 15px;
+  border: 2px solid #14253d80;
+  filter: drop-shadow(2px 6px 12px #14253d);
+  background-color: #ffffff14;
+  border-radius: 8px;
   text-decoration: none;
 }
 /* mobile styles*/
