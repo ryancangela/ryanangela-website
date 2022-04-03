@@ -1,0 +1,169 @@
+/* styles to follow*/
+/*
+## Colors
+
+## Fonts
+font-family: 'Rubik Glitch', cursive;
+
+
+
+*/
+
+body {
+  background-color: #0c1624;
+  margin: auto;
+}
+
+.hero-wrapper {
+  margin: 100px 100px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Rubik", cursive;
+  color: #f4f4f4;
+  /* animation-delay: 0.5s;
+  animation-duration: 1s; */
+}
+
+h1 span {
+  font-size: 2.5rem;
+}
+
+.projects {
+  margin: 50px auto;
+  width: 90vw;
+  height: auto;
+  gap: 50px;
+}
+
+.project-block {
+  width: 20vw;
+  height: 400px;
+  background-color: #14253d;
+  border-radius: 24px;
+  filter: drop-shadow(2px 6px 12px #14253d);
+}
+
+.projects .nft-card {
+  background-image: linear-gradient(to bottom, #0c162480, #03060a80),
+    url("https://nftcard-project-frontendmentor.netlify.app/images/image-equilibrium.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.projects .logitech-g502-card {
+  background-image: linear-gradient(to bottom, #0c162480, #03060a80),
+    url("https://www.itl.cat/pngfile/big/112-1129218_logitech-wallpapers-large-logitech-wallpapers-pc-pic-logitech.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.nft-card {
+  animation-delay: 0.5s;
+}
+.logitech-g502-card {
+  animation-delay: 0.55s;
+}
+.card-three {
+  animation-delay: 0.65s;
+}
+
+.projects-details {
+  display: block;
+}
+
+.projects .project-block .projects-details {
+  font-size: 1.75rem;
+  line-height: 1em;
+  color: #fff;
+  font-family: "Rubik", cursive;
+  filter: drop-shadow(1px 2px 4px #14253d);
+  margin: 20vh auto;
+  text-align: center;
+}
+
+.projects-details a {
+  font-size: 16px;
+  text-align: center;
+  margin: 20px auto;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px 15px;
+  background-color: #14253d;
+  filter: drop-shadow(1px 2px 4px #14253d);
+  border-radius: 15px;
+  text-decoration: none;
+}
+/* mobile styles*/
+@media only screen and (max-width: 768px) {
+  .projects {
+    display: block !important;
+    margin: auto;
+  }
+  .project-block {
+    width: 300px;
+    height: 300px;
+    margin: 40px auto;
+    padding: 10px;
+  }
+  .projects .project-block .projects-details h3 {
+    font-size: 1.75rem;
+    line-height: 1em;
+    color: #fff;
+    font-family: "Rubik", cursive;
+    filter: drop-shadow(1px 2px 4px #14253d);
+    margin: -30px 0 -10px 0;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+/* flex styles*/
+@media only screen and (min-width: 769px) {
+  .projects {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .projects:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+  }
+
+  .projects:nth-child(2) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+  }
+}
