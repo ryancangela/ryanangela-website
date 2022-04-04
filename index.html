@@ -26,10 +26,13 @@
     <div class="project-wrapper">
         <div class="projects">
 
-            <div class="project-block nft-card animate__animated animate__fadeInUp">
+            <div class="project-block nft-card animate__animated animate__fadeInUp" id="show-more">
                 <div class="projects-details">
                     <h3>NFT Card</h3>
-                    <a href="https://nftcard-project-frontendmentor.netlify.app">take a look</a>
+                    <div id="info-more" style="display:none;">
+                        <p>Challenge from FrontMentor.com using HTML, JS, CSS</p>
+                        <a href="https://nftcard-project-frontendmentor.netlify.app">take a look</a>
+                    </div>
                 </div>
             </div>
             <div class="project-block logitech-g502-card animate__animated animate__fadeInUp">
@@ -52,4 +55,13 @@
     </div>
 
     </div>
+    <script>
+        // Pure Javascript
+        // document.getElementById('show-more').onmouseover = function () {
+        //     document.getElementById('info-more').style.opacity = '1';
+        // }
+        // document.getElementById('show-more').onmouseout = function () {
+        //     document.getElementById('info-more').style.opacity = '0';
+        // }
+    </script>
 </body>
