@@ -1,13 +1,10 @@
 /* styles to follow*/
-/*
-## Colors
-
-## Fonts
-font-family: 'Rubik Glitch', cursive;
-
-
-
-*/
+/**/
+/* Colors*/
+/* #0c1624 */
+/* #14253d */
+/* Fonts */
+/*font-family: 'Rubik Glitch', cursive; */
 
 body {
   background-color: #0c1624;
@@ -48,8 +45,6 @@ h1 span {
   transition: all 1s ease-in-out;
 }
 
-.projects .nft-card, .logitech-g502-card, .dankquote-card{}
-
 .projects .nft-card {
   background-image: linear-gradient(to bottom, #0c162480, #03060a80),
     url("assets/images/image-equilibrium.jpg");
@@ -88,7 +83,7 @@ h1 span {
   display: block;
 }
 
-.projects .project-block .projects-details{
+.projects .project-block .projects-details {
   font-size: 1.75rem;
   line-height: 1em;
   color: #fff;
@@ -98,7 +93,7 @@ h1 span {
   text-align: center;
 }
 
-.projects .project-block .projects-details h3{
+.projects .project-block .projects-details h3 {
   margin-top: 10vh;
   transition: all 1s ease-in-out;
 }
@@ -116,8 +111,6 @@ h1 span {
   transition: all 1s ease-in-out;
   height: 50px;
 }
-
-
 
 .projects .project-block .projects-details a {
   font-size: 16px;
@@ -162,6 +155,7 @@ h1 span {
     margin: -30px 0 -10px 0;
     vertical-align: middle;
     text-align: center;
+    height: 2rem;
   }
   .projects .project-block .projects-details p {
     font-size: 1.05rem;
@@ -170,33 +164,32 @@ h1 span {
     text-align: center;
     opacity: 1;
     width: 75%;
-    margin: 1.75vh auto 7vh auto;
+    margin: 0 auto;
     transition: all 1s ease-in-out;
-    height: 50px;
+    height: 9rem;
   }
-  .projects .project-block .projects-details h3{
-    margin: 3vh auto 1vh auto;
+  .projects .project-block .projects-details h3 {
+    margin: 3vh auto 2vh auto;
     transition: all 1s ease-in-out;
   }
 }
-
 /* flex styles*/
 @media only screen and (min-width: 769px) {
   .projects {
     display: grid;
-      justify-content: center;
-      flex-wrap: wrap;
-      flex-basis: auto;
-      grid-template-columns: repeat(3, 1fr);
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      column-gap: 3em;
-      row-gap: 3em;
-      margin-top: 6vh;
-      padding: 1em;
-      transition: all ease-in-out .85s;
-      width: 90vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    column-gap: 3em;
+    row-gap: 3em;
+    margin-top: 6vh;
+    padding: 1em;
+    transition: all ease-in-out 0.85s;
+    width: 90vw;
   }
 
   .projects:nth-child(1) {
@@ -222,17 +215,17 @@ h1 span {
     -ms-flex-item-align: auto;
     align-self: auto;
   }
-  /* hover styles */
-#hover-here:hover > #show-here h3 {
-  margin-top: 8vh;
-  margin-bottom: 3vh;
-  transition: all 1s ease;
-}
 
-#hover-here:hover > #show-here p {
-  display: block;
-  transition: all 1s ease;
-  opacity: 1;
-  margin-bottom: 50px;
-}
+  #hover-here:hover > #show-here h3 {
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+    transition: all 1s ease;
+  }
+
+  #hover-here:hover > #show-here p {
+    display: block;
+    transition: all 1s ease;
+    opacity: 1;
+    margin-bottom: 50px;
+  }
 }
