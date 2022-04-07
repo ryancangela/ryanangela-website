@@ -163,6 +163,21 @@ h1 span {
     vertical-align: middle;
     text-align: center;
   }
+  .projects .project-block .projects-details p {
+    font-size: 1.05rem;
+    font-family: "Rubik", cursive;
+    color: #f3f3f3;
+    text-align: center;
+    opacity: 1;
+    width: 75%;
+    margin: 1.75vh auto 7vh auto;
+    transition: all 1s ease-in-out;
+    height: 50px;
+  }
+  .projects .project-block .projects-details h3{
+    margin: 3vh auto 1vh auto;
+    transition: all 1s ease-in-out;
+  }
 }
 
 /* flex styles*/
@@ -207,13 +222,7 @@ h1 span {
     -ms-flex-item-align: auto;
     align-self: auto;
   }
-}
-
-@media only screen and (min-width: 2200px) {
-
-
-}
-/* hover styles */
+  /* hover styles */
 #hover-here:hover > #show-here h3 {
   margin-top: 8vh;
   margin-bottom: 3vh;
@@ -225,4 +234,5 @@ h1 span {
   transition: all 1s ease;
   opacity: 1;
   margin-bottom: 50px;
+}
 }
