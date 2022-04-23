@@ -69,6 +69,14 @@ h1 span {
   transition: all 1s ease-in-out;
 }
 
+.projects .solarsystem-card {
+  background-image: linear-gradient(to bottom, #0c162480, #03060a80),
+    url("assets/images/solar-system-inmotion.png");
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease-in-out;
+}
+
 .nft-card {
   animation-delay: 0.5s;
 }
@@ -77,6 +85,9 @@ h1 span {
 }
 .dankquote-card {
   animation-delay: 0.6s;
+}
+.solarsystem-card {
+  animation-delay: 0.65s;
 }
 
 .projects-details {
