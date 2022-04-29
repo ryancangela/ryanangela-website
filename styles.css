@@ -77,17 +77,28 @@ h1 span {
   transition: all 1s ease-in-out;
 }
 
+.projects .todolist-card {
+  background-image: linear-gradient(to bottom, #0c162480, #03060a80),
+    url("assets/images/todo-screen.png");
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease-in-out;
+}
+
 .nft-card {
   animation-delay: 0.5s;
 }
 .logitech-g502-card {
   animation-delay: 0.55s;
 }
-.dankquote-card {
+.solarsystem-card {
   animation-delay: 0.6s;
 }
-.solarsystem-card {
+.todolist-card {
   animation-delay: 0.65s;
+}
+.dankquote-card {
+  animation-delay: 0.7s;
 }
 
 .projects-details {
