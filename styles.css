@@ -28,6 +28,18 @@ h1 span {
   font-size: 2.5rem;
 }
 
+h2 {
+  font-size: 2rem;
+  font-family: "Rubik", cursive;
+  color: #f4f4f4;
+  /* animation-delay: 0.5s;
+  animation-duration: 1s; */
+}
+
+h2 span {
+  font-size: 1.5rem;
+}
+
 .projects {
   width: 90vw;
   height: auto;
