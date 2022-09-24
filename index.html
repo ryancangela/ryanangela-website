@@ -29,6 +29,95 @@
     <div class="project-wrapper">
         <div class="projects">
 
+            <div class="card">
+                <img src="assets/images/image-equilibrium.jpg" alt="car" />
+                <div class="inner-card">
+                    <h3>NFT Card</h3>
+                    <p>objective: create a fun animated single card layout to display an nft details</p>
+                    <a href="https://nftcard-project-frontendmentor.netlify.app">take a look</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/112-1129218_logitech-wallpapers-large-logitech-wallpapers-pc-pic-logitech.jpg"
+                    alt="car" />
+                <div class="inner-card">
+                    <h3>Logitech G502</h3>
+                    <p>objective: create a branding matched product page to show off my favorite mouse, the logitech's
+                        g502 hero</p>
+                    <a href="https://logitech-product-page.netlify.app/">take a look</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/dankquotes-bg.png" alt="car" />
+                <div class="inner-card">
+                    <h3>Solar System: InMotion</h3>
+                    <p>objective: create our solar system in a linear view</p>
+                    <a href="https://solar-system-inmotion.netlify.app/">take a look</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/solar-system-inmotion.png" alt="car" />
+                <div class="inner-card">
+                    <h3>ToDo List with Theme Toggle</h3>
+                    <p>objective: practice javascript with a function & ui design</p>
+                    <a href="https://todolist-w-themetoggle.netlify.app/">take a look</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="assets/images/todo-screen.png" alt="car" />
+                <div class="inner-card">
+                    <h3>Dank Quotes</h3>
+                    <p>objective: create a quotes gallery of people. opinions are open to your own opinion</p>
+                    <a href="https://dankquote.com/">take a look</a>
+                </div>
+            </div>
+
+
+            <style>
+                .card {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 26px;
+                    display: grid;
+                    grid-template-rows: minmax(100%, 1fr);
+                    grid-template-areas: "stack";
+                    overflow: hidden;
+                }
+
+                .card>img,
+                .card>.inner-card {
+                    grid-area: stack;
+                }
+
+                .inner-card {
+                    border-radius: 26px;
+                    padding: 0 2rem;
+                }
+
+                .card>img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .card>.inner-card {
+                    grid-area: stack;
+                    background-color: #242424e0;
+                    transform: translateY(calc(100% - 4rem));
+                    transition: all 590ms ease-in-out;
+                }
+
+                .card>.inner-card>h3 {
+                    height: 4rem;
+                    color: #fff;
+                }
+
+                .card:hover .inner-card {
+                    transform: none;
+                }
+            </style>
+
+
             <div class="project-block nft-card animate__animated animate__fadeInUp" id="hover-here">
                 <div class="projects-details" id="show-here">
                     <h3>NFT Card</h3>

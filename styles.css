@@ -1,25 +1,31 @@
 /* styles to follow*/
-/**/
+:root {
+  --color-w: #f4f4f4;
+  --color-b: #0c1624;
+  --ff: "Rubik", cursive;
+  --trans: all 250ms ease-in-out;
+}
 /* Colors*/
+
 /* #0c1624 */
 /* #14253d */
 /* Fonts */
 /*font-family: 'Rubik Glitch', cursive; */
 
 body {
-  background-color: #0c1624;
+  background: var(--color-b);
   margin: auto;
 }
 
 .hero-wrapper {
   margin: 6vh 5vw;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 h1 {
   font-size: 3rem;
-  font-family: "Rubik", cursive;
-  color: #f4f4f4;
+  font-family: var(--ff);
+  color: var(--color-w);
   /* animation-delay: 0.5s;
   animation-duration: 1s; */
 }
@@ -30,8 +36,8 @@ h1 span {
 
 h2 {
   font-size: 2rem;
-  font-family: "Rubik", cursive;
-  color: #f4f4f4;
+  font-family: var(--ff);
+  color: var(--color-w);
   /* animation-delay: 0.5s;
   animation-duration: 1s; */
 }
@@ -44,7 +50,7 @@ h2 span {
   width: 90vw;
   height: auto;
   gap: 50px;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .project-block {
@@ -54,7 +60,7 @@ h2 span {
   border-radius: 24px;
   filter: drop-shadow(0.125rem 0.375rem 0.75rem #14253d);
   /* filter: drop-shadow(2px 6px 12px #14253d); */
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .projects .nft-card {
@@ -62,7 +68,7 @@ h2 span {
     url("assets/images/image-equilibrium.jpg");
   background-size: cover;
   background-position: center;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .projects .logitech-g502-card {
@@ -70,7 +76,7 @@ h2 span {
     url("assets/images/112-1129218_logitech-wallpapers-large-logitech-wallpapers-pc-pic-logitech.jpg");
   background-size: cover;
   background-position: center;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .projects .dankquote-card {
@@ -78,7 +84,7 @@ h2 span {
     url("assets/images/dankquotes-bg.png");
   background-size: cover;
   background-position: center;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .projects .solarsystem-card {
@@ -86,7 +92,7 @@ h2 span {
     url("assets/images/solar-system-inmotion.png");
   background-size: cover;
   background-position: center;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .projects .todolist-card {
@@ -94,7 +100,7 @@ h2 span {
     url("assets/images/todo-screen.png");
   background-size: cover;
   background-position: center;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .nft-card {
@@ -120,8 +126,8 @@ h2 span {
 .projects .project-block .projects-details {
   font-size: 1.75rem;
   line-height: 1em;
-  color: #fff;
-  font-family: "Rubik", cursive;
+  color: var(--color-w);
+  font-family: var(--ff);
   filter: drop-shadow(1px 2px 4px #14253d);
   /* margin: 20vh auto; */
   text-align: center;
@@ -129,20 +135,20 @@ h2 span {
 
 .projects .project-block .projects-details h3 {
   margin-top: 10vh;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .projects .project-block .projects-details p {
   font-size: 1.05rem;
-  font-family: "Rubik", cursive;
-  color: #f3f3f3;
+  font-family: var(--ff);
+  color: var(--color-w);
   text-align: center;
   margin-bottom: 50px;
   opacity: 0;
   margin-bottom: -3vh;
   width: 75%;
   margin: 0 auto -3vh auto;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
   height: 50px;
 }
 
@@ -151,7 +157,7 @@ h2 span {
   text-align: center;
   margin: 20px auto;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-w);
   font-family: "Open Sans", sans-serif;
   padding: 10px 15px;
   border: 2px solid #14253d80;
@@ -159,12 +165,12 @@ h2 span {
   background-color: #ffffff14;
   border-radius: 8px;
   text-decoration: none;
-  transition: all 1s ease-in-out;
+  transition: var(--trans);
 }
 
 .projects .project-block .projects-details a:hover {
-  color: #0c1624;
-  background-color: #f4f4f4;
+  color: var(--color-b);
+  background-color: var(--color-w);
   filter: drop-shadow(2px 6px 12px #3664a3);
 }
 
@@ -183,8 +189,8 @@ h2 span {
   .projects .project-block .projects-details h3 {
     font-size: 1.75rem;
     line-height: 1em;
-    color: #fff;
-    font-family: "Rubik", cursive;
+    color: var(--color-w);
+    font-family: var(--ff);
     filter: drop-shadow(1px 2px 4px #14253d);
     margin: -30px 0 -10px 0;
     vertical-align: middle;
@@ -193,18 +199,18 @@ h2 span {
   }
   .projects .project-block .projects-details p {
     font-size: 1.05rem;
-    font-family: "Rubik", cursive;
-    color: #f3f3f3;
+    font-family: var(--ff);
+    color: var(--color-w);
     text-align: center;
     opacity: 1;
     width: 75%;
     margin: 0 auto;
-    transition: all 1s ease-in-out;
+    transition: var(--trans);
     height: 9rem;
   }
   .projects .project-block .projects-details h3 {
     margin: 3vh auto 2vh auto;
-    transition: all 1s ease-in-out;
+    transition: var(--trans);
   }
 }
 /* flex styles*/
