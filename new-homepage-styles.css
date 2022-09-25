@@ -6,7 +6,7 @@
   --color-lb: #4fc1f3;
 
   --ff: "Rubik", cursive;
-  --trans: all 250ms ease-in-out;
+  --trans: all 350ms ease-in-out;
 }
 /* Colors*/
 
@@ -27,7 +27,11 @@ body {
   /* max-width: 80%; */
 }
 
-section#content {
+section#content,
+section#about,
+section#services,
+section#work,
+section#contact {
   margin: auto;
   width: 80%;
 }
@@ -57,7 +61,7 @@ a.btn,
   grid-template-rows: 1fr;
   gap: 1px 1px;
   grid-template-areas: ". .";
-  width: 100%;
+  width: 95%;
   height: 100%;
   margin: 5rem auto 0 auto;
 }
@@ -92,7 +96,7 @@ a.btn,
 }
 
 .hero-wrapper {
-  margin: 20rem 0rem 20rem 0rem;
+  margin: 25rem 0rem 15rem 0rem;
   transition: var(--trans);
 
   align-items: center;
@@ -158,10 +162,25 @@ a.btn,
 .social-wrapper img {
   width: 80%;
 }
+
+.section-divider {
+  position: relative;
+  transition: var(--trans);
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". .";
+  width: 100%;
+  height: 100%;
+}
+
 .section-divider img {
-  width: 20%;
-  position: absolute;
-  left: 0;
+  width: 50%;
 }
 
 .about-wrapper,
@@ -200,7 +219,9 @@ a.btn,
 }
 
 .about-wrapper {
-  margin: 70rem 0rem 5rem 0rem;
+  margin: 0 auto 5rem auto;
+  padding: 20rem 0;
+  width: 80%;
 }
 
 .work-wrapper,
@@ -214,8 +235,20 @@ a.btn,
 }
 
 .work-cards {
+  position: relative;
+  transition: var(--trans);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 5rem;
+  grid-template-areas: ". . .";
+  width: 95%;
+  height: 100%;
+  margin: 10rem auto 5rem auto;
 }
-
 .section-marker {
   align-self: flex-start;
 
@@ -271,10 +304,18 @@ a.btn,
   line-height: 2rem;
 }
 
+.work-items img {
+  width: 100%;
+}
+
 .about-images {
   margin: 0 auto;
 }
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+
+section#about {
+  background: var(--color-db);
+  width: 100%;
+}
 
 .slider-ctr {
   width: 70rem;
@@ -315,12 +356,12 @@ a.btn,
   text-align: center;
   line-height: 40px;
   cursor: pointer;
-  transition: 0.3s all ease;
+  transition: var(--trans);
   background: white;
 }
 .slider-control .control .icon {
   pointer-events: none;
-  transition: 0.3s all ease;
+  transition: var(--trans);
 }
 .slider-control .control.disabled {
   pointer-events: none;
@@ -473,8 +514,8 @@ a.btn,
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
-  transition: 0.4s;
+  font-size: 2rem;
+  transition: var(--trans);
 
   margin: 2rem 0;
 }
@@ -496,14 +537,16 @@ a.btn,
 
 .active,
 .accordion:first-child:hover {
-  background-color: #264757;
-  /* border-radius: 2.2rem !important;
+  /* background-color: #264757;
+  border-radius: 2.2rem !important;
   margin: 0 0 2rem 0; */
 }
 .active,
 .accordion:hover {
   background-color: #264757;
   border-radius: 2.2rem !important;
+  transition: 0.4s;
+  transition: var(--trans);
 }
 
 .accordion:after {
@@ -512,10 +555,25 @@ a.btn,
   font-weight: bold;
   float: right;
   margin-left: 5px;
+  transform: var(--trans);
+}
+
+.accordion:hover:after {
+  content: "\25BC";
+  opacity: 0.6;
+  transform: var(--trans);
 }
 
 .active:after {
   content: "\25B2";
+  color: var(--color-w);
+  transform: var(--trans);
+}
+
+.active:hover:after {
+  content: "\25B2";
+  opacity: 0.6;
+  transform: var(--trans);
 }
 
 .panel {
@@ -526,9 +584,12 @@ a.btn,
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   margin: -4rem 0 2rem 0;
+
+  transition: var(--trans);
 }
 
-.work-items h3 {
+.work-items h3,
+.contact-info h3 {
   color: var(--color-w);
   font-family: var(--ff);
   font-size: 2.2rem;
@@ -536,7 +597,7 @@ a.btn,
 }
 
 /* form styles */
-section.contact-form {
+section#contact {
   min-width: 100%;
   background: var(--color-db);
   margin: 30rem auto 5rem auto !important;
@@ -544,13 +605,13 @@ section.contact-form {
 
 .contact-wrapper {
   padding: 10rem 0 0 0;
-  margin: 20rem auto 0 auto;
+  margin: 30rem auto 5rem auto;
   width: 80%;
 }
 
 .form-wrapper {
   position: relative;
-  margin: 0rem auto 10rem auto;
+  margin: 0rem auto 0rem auto;
   transition: var(--trans);
   align-items: center;
   display: grid;
@@ -564,7 +625,7 @@ section.contact-form {
   width: 80%;
   height: 100%;
 
-  padding: 0 0 10rem 0;
+  padding: 0 0 15rem 0;
 }
 
 #my-form {
@@ -633,7 +694,11 @@ section.contact-form {
   body {
     width: 100%;
   }
-  section#content {
+  section#content,
+  section#about,
+  section#services,
+  section#work,
+  section#contact {
     width: 95%;
   }
   .hero-wrapper {
