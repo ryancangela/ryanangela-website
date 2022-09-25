@@ -17,15 +17,23 @@
 
 html {
   font-size: 10px;
+  width: 100%;
 }
 
 body {
   background: var(--color-b);
   margin: auto;
-  max-width: 80%;
+  width: 100%;
+  /* max-width: 80%; */
 }
 
-a.btn {
+section#content {
+  margin: auto;
+  width: 80%;
+}
+
+a.btn,
+.btn {
   background-color: var(--color-lb);
   border-radius: 1.6rem;
   color: var(--color-b);
@@ -84,7 +92,7 @@ a.btn {
 }
 
 .hero-wrapper {
-  margin: 30rem 0rem 20rem 0rem;
+  margin: 20rem 0rem 20rem 0rem;
   transition: var(--trans);
 
   align-items: center;
@@ -156,14 +164,14 @@ a.btn {
   left: 0;
 }
 
-.about-wrapper {
+.about-wrapper,
+.work-wrapper,
+.services-wrapper,
+.work-cards,
+.contact-wrapper {
   position: relative;
-  top: 50rem;
-
-  margin: 30rem 0rem 30rem 0rem;
   transition: var(--trans);
 
-  align-items: center;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
@@ -174,6 +182,38 @@ a.btn {
   grid-template-areas: ". . .";
   width: 100%;
   height: 100%;
+}
+
+.services-cards {
+  position: relative;
+  transition: var(--trans);
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0 6rem;
+  grid-template-areas: ". . .";
+  width: 100%;
+  height: 100%;
+}
+
+.about-wrapper {
+  margin: 70rem 0rem 5rem 0rem;
+}
+
+.work-wrapper,
+.services-wrapper,
+.work-cards {
+  margin: 30rem 0rem 5rem 0rem;
+}
+
+.services-wrapper {
+  align-items: flex-start;
+}
+
+.work-cards {
 }
 
 .section-marker {
@@ -189,7 +229,7 @@ a.btn {
 }
 
 .section-marker[attribute="about"] {
-  margin-top: 11rem;
+  margin-top: 5rem;
 }
 .section-marker[attribute="services"] {
   margin-top: 5rem;
@@ -197,10 +237,15 @@ a.btn {
 .section-marker[attribute="work"] {
   margin-top: 5rem;
 }
+.section-marker[attribute="contact"] {
+  margin-top: 5rem;
+}
 
 .about-wrapper h2,
 .services-wrapper h2,
-.work-wrapper h2 {
+.work-wrapper h2,
+.contact-wrapper h2,
+.form-wrapper h2 {
   color: var(--color-w);
   font-family: var(--ff);
   font-size: 4.4rem;
@@ -356,31 +401,11 @@ a.btn {
   z-index: 9;
 }
 
-.services-wrapper {
-  position: relative;
-  top: 50rem;
-
-  margin: 30rem 0rem 30rem 0rem;
-  transition: var(--trans);
-
-  align-items: center;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 0.15fr 1.85fr 1.85fr;
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas: ". . .";
-  width: 100%;
-  height: 100%;
-}
-
 .services-icons {
   position: relative;
-  top: 30rem;
+  top: 0rem;
 
-  margin: 20rem 0;
+  margin: 0 0 3rem 0;
   transition: var(--trans);
 
   align-items: center;
@@ -400,26 +425,6 @@ a.btn {
   width: 100%;
   height: auto;
   text-align: center;
-}
-
-.services-cards {
-  position: relative;
-  top: 15rem;
-
-  margin: 5rem 0rem 30rem 0rem;
-  transition: var(--trans);
-
-  align-items: center;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0 6rem;
-  grid-template-areas: ". . .";
-  width: 100%;
-  height: 100%;
 }
 
 .services-cards .card {
@@ -452,25 +457,6 @@ a.btn {
 }
 
 /* my work section */
-.work-wrapper {
-  position: relative;
-  top: 20rem;
-
-  margin: 30rem 0rem 30rem 0rem;
-  transition: var(--trans);
-
-  align-items: center;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 0.15fr 1.85fr 1.85fr;
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas: ". . .";
-  width: 100%;
-  height: 100%;
-}
 
 /* accordion styles */
 .accordion {
@@ -542,30 +528,128 @@ a.btn {
   margin: -4rem 0 2rem 0;
 }
 
-.work-cards {
-  position: relative;
-  top: 5rem;
-  margin: 5rem auto;
-  transition: var(--trans);
-
-  place-items: center;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0 6rem;
-  grid-template-areas: ". . .";
-  width: 90%;
-  height: 100%;
-
-  margin-bottom: 5rem;
-}
-
 .work-items h3 {
   color: var(--color-w);
   font-family: var(--ff);
   font-size: 2.2rem;
   font-weight: 500;
+}
+
+/* form styles */
+section.contact-form {
+  min-width: 100%;
+  background: var(--color-db);
+  margin: 30rem auto 5rem auto !important;
+}
+
+.contact-wrapper {
+  padding: 10rem 0 0 0;
+  margin: 20rem auto 0 auto;
+  width: 80%;
+}
+
+.form-wrapper {
+  position: relative;
+  margin: 0rem auto 10rem auto;
+  transition: var(--trans);
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". .";
+  width: 80%;
+  height: 100%;
+
+  padding: 0 0 10rem 0;
+}
+
+#my-form {
+  display: grid;
+
+  background-color: var(--color-b);
+  border-radius: 22px;
+
+  padding: 5rem 4rem;
+
+  width: 90%;
+}
+
+#my-form label {
+  color: var(--color-w);
+  font-family: var(--ff);
+  font-size: 2.6rem;
+  font-weight: 600;
+  padding: 1rem 2.2rem;
+  margin: 0.25rem 0;
+}
+
+#my-form input.form-field {
+  border: 0;
+  border-radius: 1rem;
+  background-color: var(--color-db);
+  font-size: 2rem;
+  height: auto;
+  padding: 1.75rem 1.25rem;
+  margin: 0.75rem 0;
+}
+
+#my-form input.large-field {
+  /* min-height: 20rem; */
+}
+
+#my-form input.form-field::placeholder {
+  border: 0;
+  border-radius: 1rem;
+  background-color: var(--color-db);
+  font-size: 2rem;
+  height: auto;
+  padding: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+#my-form input.form-field:focus-visible {
+  outline: 0.25rem solid #fff !important;
+}
+
+#my-form-button {
+  border: 0;
+  border-radius: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  margin: 0 0 4rem 0;
+  width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+    width: 100%;
+  }
+  body {
+    width: 100%;
+  }
+  section#content {
+    width: 95%;
+  }
+  .hero-wrapper {
+    margin: 0;
+    transition: var(--trans);
+    align-items: center;
+    display: flex;
+    grid-auto-flow: unset;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px;
+    grid-template-areas: ".";
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+  }
 }
