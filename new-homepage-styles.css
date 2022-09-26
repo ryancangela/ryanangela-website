@@ -700,33 +700,33 @@ section#contact {
 
 @media only screen and (max-width: 600px) {
   html {
-    font-size: 12px;
+    font-size: 50%;
     width: 100%;
   }
   body {
     width: 100%;
+  }
+
+  #header a#logo {
+    font-size: 2.5rem;
   }
   section#content,
   section#about,
   section#services,
   section#work,
   section#contact {
-    width: 95%;
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 0;
   }
-  .hero-wrapper {
-    margin: 0;
-    transition: var(--trans);
-    align-items: center;
-    display: flex;
-    grid-auto-flow: unset;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 1px;
-    grid-template-areas: ".";
+
+  .hero-wrapper,
+  .about-wrapper,
+  .services-wrapper,
+  .work-wrapper,
+  .contact-wrapper,
+  .form-wrapper {
+    display: block;
     width: 100%;
-    height: 100%;
-    flex-wrap: wrap;
   }
 }
