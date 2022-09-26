@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="new-homepage-styles.css">
     <link rel="stylesheet" href="fonts.css">
     <script src="https://kit.fontawesome.com/156a7a1284.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D318GEZFYB"></script>
@@ -237,8 +239,8 @@
             </div>
         </div>
         <div class="accordion-wrapper">
-            <button class="accordion">UI / UX Design</button>
-            <div class="panel">
+            <button class="accordion active">UI / UX Design</button>
+            <div class="panel" style="max-height: fit-content">
                 <div class="work-cards">
                     <div class="work-items">
                         <img src="assets/images/work-design-apple-store.png">
@@ -394,7 +396,7 @@
 
         </div>
     </div>
-
+    <script src="gsap.js"></script>
     <!-- Place this script at the end of the body tag -->
     <script>
         var form = document.getElementById("my-form");
