@@ -452,9 +452,15 @@
         <script>
             const formHS = document.getElementById('inquiry-form');
             const apiKey = "pat-na1-c99f3cf0-37bf-494a-8945-cff66da64922";
+
             formHS.addEventListener('submit', async (event) => {
                 event.preventDefault();
 
+
+
+                const headers = {
+                    headers: { "Access-Control-Allow-Origin": "*" }
+                }
                 const data = {
                     firstname: formHS.firstname.value,
                     lastname: formHS.lastname.value,
