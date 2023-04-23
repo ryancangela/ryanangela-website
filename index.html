@@ -417,26 +417,60 @@
             </div>
         </div>
 
-        <div class="form-wrapper">
-            <div>
-                <!-- modify this form HTML and place wherever you want your form -->
-                <form id="my-form" action="https://formspree.io/f/xjvzwogy" method="POST">
-                    <label for="full-name">Name</label>
-                    <input type="text" name="name" id="full-name" placeholder="Your name" required=""
-                        class="form-field">
-                    <label>Email adress</label>
-                    <input type="email" name="email" placeholder="Your email address" required="" class="form-field" />
-                    <label>What service are you looking for?</label>
-                    <input type="text" name="message" placeholder="Your message" required=""
-                        class="form-field large-field" />
-                    <button id="my-form-button" class="btn">Send message</button>
-                    <p id="my-form-status"></p>
-                </form>
-            </div>
-            <div class="contact-info">
-                <h3>Need to talk sooner?</h3>
-                <p>Give me a call at <a href="tel.+15166595823">+1-516-659-5823"</p>
-            </div>
+        <h1>Hubspot CRM Inquiry Form</h1>
+        <form id="inquiry-form">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required><br><br>
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company"><br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            const formHS = document.getElementById('inquiry-form');
+            const apiKey = "pat-na1-c99f3cf0-37bf-494a-8945-cff66da64922";
+            formHS.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const data = {
+                    firstname: formHS.firstname.value,
+                    lastname: formHS.lastname.value,
+                    email: formHS.email.value,
+                    phone: formHS.phone.value,
+                    company: formHS.company.value,
+                    message: formHS.message.value,
+                };
+
+                try {
+                    const response = await axios.post('https://api.hubapi.com/contacts/v1/contact?hapikey=${apiKey}', data);
+                    console.log(response);
+                    alert('Form submitted successfully');
+                } catch (error) {
+                    console.error(error);
+                    alert('Error submitting the form');
+                }
+            });
+        </script>
+
+
+        <div class="contact-info">
+            <h3>Need to talk sooner?</h3>
+            <p>Give me a call at <a href="tel.+15166595823">+1-516-659-5823"</p>
+        </div>
         </div>
     </section>
     <div class="about-text">
@@ -445,39 +479,6 @@
         </div>
     </div>
     <script src="gsap.js"></script>
-    <!-- Place this script at the end of the body tag -->
-    <script>
-        var form = document.getElementById("my-form");
-
-        async function handleSubmit(event) {
-            event.preventDefault();
-            var status = document.getElementById("my-form-status");
-            var data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    status.innerHTML = "Thanks for your submission!";
-                    form.reset()
-                } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                        } else {
-                            status.innerHTML = "Oops! There was a problem submitting your form"
-                        }
-                    })
-                }
-            }).catch(error => {
-                status.innerHTML = "Oops! There was a problem submitting your form"
-            });
-        }
-        form.addEventListener("submit", handleSubmit)
-    </script>
 
 
     <script>
